@@ -13,13 +13,18 @@ import RxCocoa
 import RxSwift
 
 
-class SongViewController: UIViewController, UITableViewDelegate {
+class SongViewController: UIViewController, UITableViewDelegate, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var genreImage: UIImageView!
     @IBOutlet weak var genreName: UILabel!
     
+    var index : Int?
+    var position : CGPoint?
+    var size : CGSize?
     var name : String?
     var image: UIImage?
+    
+    let transition = DismissTransition()
     
     var count : Variable<[String]> = Variable<[String]>([])
     var disposeBag = DisposeBag()
@@ -81,9 +86,13 @@ class SongViewController: UIViewController, UITableViewDelegate {
         self.genreImage.addGestureRecognizer(tap)
     }
     func tapImage () {
-        let _ = self.navigationController?.popViewController(animated: true)
+        print("song", self.index, self,size, self.position)
+        
+        self.transition.index = self.index
+        self.transition.size = self.size
+        self.transition.position = self.position
+        
+        self.dismiss(animated: true, completion: nil)
     }
-
-
-
+    
 }

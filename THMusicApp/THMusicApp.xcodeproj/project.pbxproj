@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271C01EA1DEF73AC00B81E96 /* DismissTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C01E91DEF73AC00B81E96 /* DismissTransition.swift */; };
 		2782D6531DED564E0037F6EA /* TableViewSongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782D6521DED564E0037F6EA /* TableViewSongCell.swift */; };
 		2782D6561DED5EB20037F6EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782D6551DED5EB20037F6EA /* ViewController.swift */; };
 		2782D6581DED5EC50037F6EA /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782D6571DED5EC50037F6EA /* SongViewController.swift */; };
@@ -229,6 +230,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		271C01E91DEF73AC00B81E96 /* DismissTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissTransition.swift; sourceTree = "<group>"; };
 		2782D6521DED564E0037F6EA /* TableViewSongCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewSongCell.swift; sourceTree = "<group>"; };
 		2782D6551DED5EB20037F6EA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2782D6571DED5EC50037F6EA /* SongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
@@ -481,6 +483,7 @@
 			isa = PBXGroup;
 			children = (
 				2782D65E1DED96A50037F6EA /* PresentTransition.swift */,
+				271C01E91DEF73AC00B81E96 /* DismissTransition.swift */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -1656,6 +1659,7 @@
 				2782D6581DED5EC50037F6EA /* SongViewController.swift in Sources */,
 				27F6EA431DEB22D500E64472 /* CollectionGenreCell.swift in Sources */,
 				2782D65F1DED96A50037F6EA /* PresentTransition.swift in Sources */,
+				271C01EA1DEF73AC00B81E96 /* DismissTransition.swift in Sources */,
 				27F6E5B91DEB090A00E64472 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

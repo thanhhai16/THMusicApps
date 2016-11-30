@@ -19,7 +19,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UIViewControll
         
     var url: Variable<[String]> = Variable<[String]>(DataManager.shared.setUrl())
     var disposeBag = DisposeBag()
-    var transition = PresentTransition()
+    var present = PresentTransition()
+    var dismiss = DismissTransition()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,25 +49,33 @@ class ViewController: UIViewController, UICollectionViewDelegate, UIViewControll
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let songViewController = self.storyboard?.instantiateViewController(withIdentifier: "SongViewController") as! SongViewController
         let cell = collectionView.cellForItem(at: indexPath) as! CollectionGenreCell
-        songViewController.url = url.value[indexPath.row]
-        print(cell.nameGenre.text!)
+        
+        let position = CGPoint(x: cell.imageGenre.frame.origin.x, y: cell.imageGenre.frame.origin.y)
+        self.present.index = indexPath.row
+        self.present.position = cell.convert(position, to: self.view)
+        self.present.size = cell.imageGenre.frame.size
+        
+        self.dismiss.index = indexPath.row
+        self.dismiss.position = cell.convert(position, to: self.view)
+        self.dismiss.size = cell.imageGenre.frame.size
+
+        
         songViewController.image = cell.imageGenre.image
         songViewController.name = cell.nameGenre.text
-        
-//        print("cell", cell.center)
-//        transition.index = indexPath
-//        transition.fromImage?.image = cell.imageGenre.image
-//        transition.fromImage?.center = CGPoint(x: 100, y: 100)
-//        print("center",transition.fromImage?.center)
-//        transition.toImage = songViewController.genreImage
-//        
-//        songViewController.transitioningDelegate = self
-        self.navigationController?.pushViewController(songViewController, animated: true)
+        songViewController.transitioningDelegate = self
+        songViewController.url = url.value[indexPath.row]
+        songViewController.index = indexPath.row
+        songViewController.size = cell.imageGenre.frame.size
+        songViewController.position = position
+        //self.navigationController?.pushViewController(songViewController, animated: true)
+        self.present(songViewController, animated: true, completion: nil)
     }
     
-//    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//        return transition
-//    }
-    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return present
     }
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return dismiss
+    }
+        }
 
