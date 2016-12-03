@@ -15,7 +15,7 @@ class PresentTransition : NSObject, UIViewControllerAnimatedTransitioning {
     var size : CGSize?
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 2
+        return 0.5
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -41,7 +41,7 @@ class PresentTransition : NSObject, UIViewControllerAnimatedTransitioning {
         
         
         
-        UIView.animate(withDuration: 2, animations: {
+        UIView.animate(withDuration: 0.5, animations: {
             fromImage.frame.size = CGSize(width: (fromVC?.view.frame.height)!/7 - 10, height: (fromVC?.view.frame.height)!/7 - 10)
             fromImage.frame.origin.x = 8
             fromImage.frame.origin.y = 25

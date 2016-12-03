@@ -16,7 +16,7 @@ class DismissTransition : NSObject, UIViewControllerAnimatedTransitioning {
     var size : CGSize?
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 2
+        return 0.5
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -41,7 +41,7 @@ class DismissTransition : NSObject, UIViewControllerAnimatedTransitioning {
         
         print("211", fromImage.frame.size)
         
-        UIView.animate(withDuration: 2, animations: { 
+        UIView.animate(withDuration: 0.5, animations: {
             fromImage.frame.size = self.size!
             fromImage.frame.origin.x = (self.position?.x)!
             fromImage.frame.origin.y = (self.position?.y)!

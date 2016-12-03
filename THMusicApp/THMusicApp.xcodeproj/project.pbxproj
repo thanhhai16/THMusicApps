@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		271C01EA1DEF73AC00B81E96 /* DismissTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C01E91DEF73AC00B81E96 /* DismissTransition.swift */; };
+		272C7D191DF2AE030022AAEB /* StringScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272C7D181DF2AE030022AAEB /* StringScore.swift */; };
+		273097E11DF30BE700BEEA01 /* PlayMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273097E01DF30BE700BEEA01 /* PlayMusic.swift */; };
 		2782D6531DED564E0037F6EA /* TableViewSongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782D6521DED564E0037F6EA /* TableViewSongCell.swift */; };
 		2782D6561DED5EB20037F6EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782D6551DED5EB20037F6EA /* ViewController.swift */; };
 		2782D6581DED5EC50037F6EA /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782D6571DED5EC50037F6EA /* SongViewController.swift */; };
@@ -231,6 +233,8 @@
 
 /* Begin PBXFileReference section */
 		271C01E91DEF73AC00B81E96 /* DismissTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissTransition.swift; sourceTree = "<group>"; };
+		272C7D181DF2AE030022AAEB /* StringScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringScore.swift; sourceTree = "<group>"; };
+		273097E01DF30BE700BEEA01 /* PlayMusic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayMusic.swift; sourceTree = "<group>"; };
 		2782D6521DED564E0037F6EA /* TableViewSongCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewSongCell.swift; sourceTree = "<group>"; };
 		2782D6551DED5EB20037F6EA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2782D6571DED5EC50037F6EA /* SongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
@@ -450,7 +454,7 @@
 		27F6E8DA1DEB1B3B00E64472 /* search-recent@3x.png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-recent@3x.png.png"; sourceTree = "<group>"; };
 		27F6E9CE1DEB1F6A00E64472 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = "../../Libraries/AlamofireImage-master/build/Debug-iphoneos/AlamofireImage.framework"; sourceTree = "<group>"; };
 		27F6EA421DEB22D500E64472 /* CollectionGenreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionGenreCell.swift; sourceTree = "<group>"; };
-		27F6EA441DEB287C00E64472 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		27F6EA441DEB287C00E64472 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = ../DataManager.swift; sourceTree = "<group>"; };
 		3C6CAD08611CD39F62EEC2DB /* Pods-THMusicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-THMusicApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-THMusicApp/Pods-THMusicApp.debug.xcconfig"; sourceTree = "<group>"; };
 		54999083C860D46CDB70D8D1 /* Pods-THMusicApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-THMusicApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-THMusicApp/Pods-THMusicApp.release.xcconfig"; sourceTree = "<group>"; };
 		988641B427B9152DCC75B487 /* Pods_THMusicApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_THMusicApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -516,7 +520,6 @@
 				27F6E5BC1DEB090A00E64472 /* Main.storyboard */,
 				27F6E5C11DEB090A00E64472 /* LaunchScreen.storyboard */,
 				27F6E5C41DEB090A00E64472 /* Info.plist */,
-				27F6EA441DEB287C00E64472 /* DataManager.swift */,
 			);
 			path = THMusicApp;
 			sourceTree = "<group>";
@@ -524,6 +527,8 @@
 		27F6E7C61DEB1B3B00E64472 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				27F6EA441DEB287C00E64472 /* DataManager.swift */,
+				272C7D181DF2AE030022AAEB /* StringScore.swift */,
 				27F6E5BF1DEB090A00E64472 /* Assets.xcassets */,
 				27F6E7C71DEB1B3B00E64472 /* genre-10.imageset */,
 				27F6E7CB1DEB1B3B00E64472 /* genre-11.imageset */,
@@ -1310,6 +1315,7 @@
 				27F6EA421DEB22D500E64472 /* CollectionGenreCell.swift */,
 				2782D6521DED564E0037F6EA /* TableViewSongCell.swift */,
 				2782D65B1DED85250037F6EA /* SongModel.swift */,
+				273097E01DF30BE700BEEA01 /* PlayMusic.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1358,6 +1364,7 @@
 				TargetAttributes = {
 					27F6E5B41DEB090A00E64472 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 68C8FM8363;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1657,10 +1664,12 @@
 				27F6EA451DEB287C00E64472 /* DataManager.swift in Sources */,
 				2782D65C1DED85250037F6EA /* SongModel.swift in Sources */,
 				2782D6581DED5EC50037F6EA /* SongViewController.swift in Sources */,
+				272C7D191DF2AE030022AAEB /* StringScore.swift in Sources */,
 				27F6EA431DEB22D500E64472 /* CollectionGenreCell.swift in Sources */,
 				2782D65F1DED96A50037F6EA /* PresentTransition.swift in Sources */,
 				271C01EA1DEF73AC00B81E96 /* DismissTransition.swift in Sources */,
 				27F6E5B91DEB090A00E64472 /* AppDelegate.swift in Sources */,
+				273097E11DF30BE700BEEA01 /* PlayMusic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1784,7 +1793,9 @@
 			baseConfigurationReference = 3C6CAD08611CD39F62EEC2DB /* Pods-THMusicApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 68C8FM8363;
 				INFOPLIST_FILE = THMusicApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.Hai.THMusicApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1797,7 +1808,9 @@
 			baseConfigurationReference = 54999083C860D46CDB70D8D1 /* Pods-THMusicApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 68C8FM8363;
 				INFOPLIST_FILE = THMusicApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.Hai.THMusicApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
